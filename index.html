@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Fawzi and rayan</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo"><img src="logo.png" alt="Logo" /></a>
+        <span class="menu-toggle">&#9776;</span>
+        <ul>
+          <li><a href="index.html">Dice Game</a></li>
+          <li><a href="Mats.html">Math Game</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="dice-game">
+        <h1>Dice Game</h1>
+        <div class="players">
+          <div class="player">
+            <h2>Player 1</h2>
+            <div class="dice">
+              <img src="dice1.png" alt="Dice 1" id="player1-dice1" />
+              <img src="dice1.png" alt="Dice 2" id="player1-dice2" />
+            </div>
+            <p id="player1-score">Score: 0</p>
+          </div>
+          <div class="player">
+            <h2>Player 2</h2>
+            <div class="dice">
+              <img src="dice1.png" alt="Dice 1" id="player2-dice1" />
+              <img src="dice1.png" alt="Dice 2" id="player2-dice2" />
+            </div>
+            <p id="player2-score">Score: 0</p>
+          </div>
+        </div>
+        <button class="roll-button" onclick="rollDice()">Roll the Dice!</button>
+        <h2 id="result"></h2>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Fawzi's Game. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navUl = document.querySelector(".navbar ul");
+
+      menuToggle.addEventListener("click", () => {
+        navUl.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

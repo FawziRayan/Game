@@ -1,0 +1,202 @@
+/* Reset some basic elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ADD8E6;
+}
+
+/* Header Styles */
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+    background-color: #1E90FF;
+ }
+
+ .navbar .logo img {
+   height: 60px;
+   /* Adjust the height of the logo */
+ }
+
+ .navbar ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+ }
+
+ .navbar ul li {
+   margin-left: 20px;
+ }
+
+ .navbar ul li a {
+   color: white;
+   text-decoration: none;
+   padding: 8px 16px;
+   transition: background-color 0.3s;
+ }
+
+ .navbar ul li a:hover {
+   background-color: #575757;
+   border-radius: 4px;
+ }
+
+ .navbar .menu-toggle {
+   display: none;
+   font-size: 28px;
+   color: white;
+   cursor: pointer;
+ }
+
+ @media (max-width: 768px) {
+   .navbar ul {
+     display: none;
+     flex-direction: column;
+     width: 100%;
+   }
+
+   .navbar ul li {
+     margin: 0;
+     text-align: center;
+     width: 100%;
+   }
+
+   .navbar ul li a {
+     display: block;
+     padding: 10px;
+   }
+
+   .navbar .menu-toggle {
+     display: block;
+   }
+
+   .navbar ul.active {
+     display: flex;
+   }
+ }
+
+/* dice */
+
+.container {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.dice-game h1 {
+  margin-top: 0;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.player {
+  text-align: center;
+}
+
+.dice {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.dice img {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  transition: transform 0.5s ease;
+}
+
+.roll-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.roll-button:hover {
+ background-color: #228B22;
+}
+
+@media (max-width: 600px) {
+  .players {
+    flex-direction: column;
+  }
+
+  .dice img {
+    width: 70px;
+    height: 70px;
+    margin: 0 5px;
+  }
+
+  .roll-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+.dice.roll {
+  transform: rotate(360deg);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.winner {
+  color: #28a745;
+  animation: winner-animation 1s ease-in-out infinite;
+}
+
+@keyframes winner-animation {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1C3C8C;
+  color: #FFFFFF;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}

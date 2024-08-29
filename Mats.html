@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login</title>
+
+    <style>
+      .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 80%;
+        max-width: 400px;
+      }
+
+      h1 {
+        color: #4caf50; /* Green */
+      }
+
+      #problem-container {
+        margin: 20px 0;
+      }
+
+      #problem {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      #answer {
+        font-size: 20px;
+        padding: 5px;
+        width: 80px;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #feedback {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo"><img src="logo.png" alt="Logo" /></a>
+        <span class="menu-toggle">&#9776;</span>
+        <ul>
+          <li><a href="index.html">Dice Game</a></li>
+          <li><a href="Mats.html">Math Game</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>Math Game</h1>
+      <div id="problem-container">
+        <p id="problem"></p>
+        <input type="number" id="answer" placeholder=" " />
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="feedback"></p>
+      </div>
+      <button onclick="generateProblem()">New Problem</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Fawzi's Game. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navUl = document.querySelector(".navbar ul");
+
+      menuToggle.addEventListener("click", () => {
+        navUl.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
