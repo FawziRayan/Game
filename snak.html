@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Snake Game</title>
+    <style>
+      body {
+        margin: 30px;
+        font-family: Arial, sans-serif;
+        background-color: #add8e6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Main Game Container */
+      #gameContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      canvas {
+        border: 2px solid #000;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+      }
+
+      /* Control Buttons */
+      .controls {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px;
+        margin: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
+
+      /* Navigation Buttons */
+      .nav-buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .nav-buttons button {
+        background-color: #f44336;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 45%;
+      }
+
+      .nav-buttons button.restart {
+        background-color: #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Game Container -->
+    <div id="gameContainer">
+      <canvas id="gameCanvas"></canvas>
+      <div class="controls">
+        <button class="button" id="upBtn">↑</button>
+      </div>
+      <div class="controls">
+        <button class="button" id="leftBtn">←</button>
+        <button class="button" id="downBtn">↓</button>
+        <button class="button" id="rightBtn">→</button>
+      </div>
+      <!-- Navigation Buttons -->
+      <div class="nav-buttons">
+        <button class="exit" onclick="window.location.href='index.html'">
+          Exit Game
+        </button>
+        <button class="restart" onclick="restartGame()">Restart Game</button>
+      </div>
+    </div>
+
+    <!-- Snake Game JavaScript -->
+    <script src="snake.js"></script>
+
+    <script>
+      function restartGame() {
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>
